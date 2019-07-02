@@ -29,6 +29,10 @@ const path = require('path')
 // }
 // 前台页面
 module.exports.getIndexPage = (req,res)=>{
+    // render()函数完成了3个事件
+    // 读取文件内容，
+    // 如果是数据，进行动态渲染
+    // 将渲染结果返回
     res.render('index.ejs')
 }
 module.exports.getDetailPage = (req,res)=>{
@@ -70,7 +74,7 @@ module.exports.getAdminSettingsPage = (req,res)=>{
     res.render('admin/settings.ejs')
 }
 module.exports.getAdminSlidesPage = (req,res)=>{
-    res.render('admin/sliders.ejs')
+    res.render('admin/slides.ejs')
 }
 module.exports.getAdminUsersPage = (req,res)=>{
     res.render('admin/users.ejs')

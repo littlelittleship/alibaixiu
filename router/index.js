@@ -13,28 +13,29 @@ router.get('/',pageController.getIndexPage)
     .get('/list',pageController.getListPage)
 
     // 后台页面,给后台应用添加一个前缀admin
-    .get('/adminIndex',pageController.getAdminIndexPage)
+    // 其中admin默认是后台的index页面
+    .get('/admin',pageController.getAdminIndexPage)
 
-    .get('/adminCategories',pageController.getAdminCategoriesPage)
+    .get('/admin/categories',pageController.getAdminCategoriesPage)
 
-    .get('/adminComments',pageController.getAdminCommentsPage)
+    .get('/admin/comments',pageController.getAdminCommentsPage)
 
-    .get('/adminLogin',pageController.getAdminLoginPage)
+    .get('/admin/login',pageController.getAdminLoginPage)
 
-    .get('/adminNav-menus',pageController.getAdminNavMenusPage)
+    .get('/admin/nav-menus',pageController.getAdminNavMenusPage)
 
-    .get('/adminPassword-reset',pageController.getAdminPasswordResetPage)
+    .get('/admin/password-reset',pageController.getAdminPasswordResetPage)
 
-    .get('/adminPost-add',pageController.getAdminPostAddPage)
+    .get('/admin/post-add',pageController.getAdminPostAddPage)
     
-    .get('/adminPosts',pageController.getAdminPostsPage)
+    .get('/admin/posts',pageController.getAdminPostsPage)
 
-    .get('/adminProfile',pageController.getAdminProfilePage)
+    .get('/admin/profile',pageController.getAdminProfilePage)
 
-    .get('/adminSettings',pageController.getAdminSettingsPage)
+    .get('/admin/settings',pageController.getAdminSettingsPage)
 
-    .get('/adminSlides',pageController.getAdminSlidesPage)
+    .get('/admin/slides',pageController.getAdminSlidesPage)
     
-    .get('/adminUsers',pageController.getAdminUsersPage)
+    .get('/admin/users',pageController.getAdminUsersPage)
 
 module.exports = router
