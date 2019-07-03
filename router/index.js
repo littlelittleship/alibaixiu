@@ -1,5 +1,7 @@
 // 引入控制器模块
 const pageController = require('../controllers/pageController.js')
+// 引入post控制器模块
+const postsController = require('../controllers/postsController')
 // 引入express框架
 const express = require('express')
 // Router()构造函数创建的变量可以当做中间件来使用
@@ -37,5 +39,7 @@ router.get('/',pageController.getIndexPage)
     .get('/admin/slides',pageController.getAdminSlidesPage)
     
     .get('/admin/users',pageController.getAdminUsersPage)
+
+    .get('/getPostList',postsController.getPostList)
 
 module.exports = router

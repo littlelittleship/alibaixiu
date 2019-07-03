@@ -4,6 +4,9 @@ const express = require('express')
 // 引入路由模块
 const router = require('./router/index.js')
 
+// 引入body-parser模块
+const bodyParser = require('body-parser')
+
 // 引入fs模块
 const fs = require('fs')
 // 引入path模块
@@ -16,6 +19,10 @@ const app = express()
 //这只了ejs引擎后能直接用res.render渲染页面
 app.set('view engine','ejs')
 app.set('views','./views')
+
+// 设置body-parser的配置,不用自带的编码，用json
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 // 监听指定端口
 app.listen(3000,()=>{
